@@ -1,8 +1,10 @@
 package life.ycode.community;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//添加mapper扫描器
 @SpringBootApplication
 public class CommunityApplication {
 

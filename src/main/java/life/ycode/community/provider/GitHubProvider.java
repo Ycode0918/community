@@ -11,6 +11,7 @@ import java.io.IOException;
 @Component
 public class GitHubProvider {
 
+    //获取token
     public String getAccessToken(AccessTokenDTO accessTokenDTO){
 
         MediaType mediaType
@@ -34,6 +35,7 @@ public class GitHubProvider {
     }
 
 
+    //获取githubUser对象，传入token,调用token
     public GithubUser getUser(String accessToken){
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()

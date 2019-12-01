@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //添加mapper扫描器
 @SpringBootApplication
+@MapperScan("life.ycode.community.mapper")
 public class CommunityApplication {
 
 	public static void main(String[] args) {

@@ -3,9 +3,9 @@
 <head>
     <title>PUBLISH-YCODE COMMUNITY</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/community.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
 
@@ -21,6 +21,7 @@
                 <h2><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>发起</h2>
                 <hr>
                 <form action="/publish" method="post">
+                    <input type="hidden" name="id" th:value="${id}">
                     <div class="form-group">
                         <label for="title">问题标题(简单扼要):</label>
                         <input type="text" class="form-control" th:value="${title}"  id="title" name="title" placeholder="问题标题_">

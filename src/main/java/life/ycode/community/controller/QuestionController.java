@@ -1,7 +1,6 @@
 package life.ycode.community.controller;
 
 import life.ycode.community.dto.QuestionDTO;
-import life.ycode.community.mapper.QuestionMapper;
 import life.ycode.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +18,8 @@ public class QuestionController {
     public String question(@PathVariable(name = "id") Integer id,
                            Model model){
         QuestionDTO questionDTO = questionService.getById(id);
+        //累加阅读数
+        questionService.incView(id);
         model.addAttribute("question",questionDTO);
         return "question";
     }
